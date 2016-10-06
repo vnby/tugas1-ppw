@@ -1,14 +1,19 @@
-html, body {
+html {
 	height: 100%;
 }
 
-#tableContainer1 {
+body {
+	height: 100%;
+	background-image: url("../images/bg-1.jpg");
+}
+
+.tableContainer1 {
 	height: 100%;
 	width: 100%;
 	display: table;
 }
 
-#tableContainer2 {
+.tableContainer2 {
 	vertical-align: middle;
 	display: table-cell;
 	height: 100%;
@@ -20,10 +25,33 @@ html, body {
 	background-color: cyan;
 }
 
+#gameTable {
+	margin: 0 auto;
+	padding: 10px;
+	background-color: cyan;
+	border-collapse: collapse;
+	border-spacing: 0 1em;
+	border: 2px;
+	text-align: center;
+	border: 1px solid black;
+}
+
+#gameTable tr {
+	height: 40px;
+}
+
+#gameTable td {
+	width: 40px;
+}
+
 #login-form {
 	text-align: right;
 }
 
 #button-form {
 	color: blue;
+}
+
+#login-button {
+	background-color: red;
 }
