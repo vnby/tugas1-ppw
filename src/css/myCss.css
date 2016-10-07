@@ -68,3 +68,32 @@ body {
 .game-Button:hover {
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
+
+#wrapper {
+	width: 100%;
+	overflow: auto;
+}
+
+#game {
+	float: left;
+	width: 60%;
+}
+
+#highscore {
+	float: right;
+	width: 35%;
+}
+
+#status {
+	width: 100%;
+}
+
+#usertime {
+	float: left;
+	width: 60%;
+}
+
+#startbutton {
+	float: right;
+	width: 40%;
+}
