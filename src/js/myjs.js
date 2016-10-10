@@ -161,5 +161,5 @@ $("#startgame").click(function(){
 });
 
 function init() {
-	document.getElementById("uname").innerHTML = localStorage.username;
+	document.getElementById("uname").innerHTML = sessionStorage.username;
 }

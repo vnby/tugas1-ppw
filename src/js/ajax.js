@@ -10,7 +10,7 @@ $(document).ready(function () {
      
     for (var i = 0; i < my_JSON_object.users.length; i++) {
       if(my_JSON_object.users[i].username == username && my_JSON_object.users[i].password == password) {
-        localStorage.setItem("username", username);
+        sessionStorage.setItem("username", username);
          window.location.replace("game.html");
       }
     }
