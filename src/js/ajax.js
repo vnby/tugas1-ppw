@@ -9,8 +9,10 @@ $(document).ready(function () {
     var password = document.getElementById("password-form").value;
      
     for (var i = 0; i < my_JSON_object.users.length; i++) {
-      if(my_JSON_object.users[i].username == username && my_JSON_object.users[i].password == password)
-        window.location.replace("game.html");
+      if(my_JSON_object.users[i].username == username && my_JSON_object.users[i].password == password) {
+        localStorage.setItem("username", username);
+         window.location.replace("game.html");
+      }
     }
   });
 });
