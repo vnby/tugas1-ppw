@@ -2,72 +2,24 @@
 <html lang="id">
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="src/css/myCss.css">
+	<link rel="stylesheet" type="text/css" href="src/mycss.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/JavaScript" src="src/js/myjs.js"></script>
 	<title>GameAsik - Game</title>
 </head>
 <body>
-	<div id="wrapper">
-		<div id="game">
-			<table id="gameTable">
-				<tr>
-					<td><button class="game-Button">Coba</button></td>
-					<td></td>
-					<td><button class="game-Button">Coba</button></td>
-					<td></td>
-					<td><button class="game-Button">Coba</button></td>
-					<td></td>
-					<td><button class="game-Button">Coba</button></td>
-				</tr>
-				<tr></tr>
-				<tr>
-					<td><button class="game-Button">Coba</button></td>
-					<td></td>
-					<td><button class="game-Button">Coba</button></td>
-					<td></td>
-					<td><button class="game-Button">Coba</button></td>
-					<td></td>
-					<td><button class="game-Button">Coba</button></td>
-				</tr>
-				<tr></tr>
-				<tr>
-					<td><button class="game-Button">Coba</button></td>
-					<td></td>
-					<td><button class="game-Button">Coba</button></td>
-					<td></td>
-					<td><button class="game-Button">Coba</button></td>
-					<td></td>
-					<td><button class="game-Button">Coba</button></td>
-				</tr>
-				<tr></tr>
-				<tr>
-					<td><button class="game-Button">Coba</button></td>
-					<td></td>
-					<td><button class="game-Button">Coba</button></td>
-					<td></td>
-					<td><button class="game-Button">Coba</button></td>
-					<td></td>
-					<td><button class="game-Button">Coba</button></td>
-				</tr>
-			</table>
-
-			<div id="status">
-				<div id="usertime">
-					<p>Username: </p>
-					<p>Time: </p>
-				</div>
-				<div id="startbutton">
-					<button>Start</button>
-				</div>
-			</div>
+	<div class="wrap">
+		<div class="info">
+			<button type="submit" class="button" onclick="start()">Start Game</button>
+			<h2>Username : <p id="uname"></p></h2>
+			<h3>Time : </h3>
+			<div class="statistic" id="stats"></div>
 		</div>
-		<div id="highscore">
-			<p>Best Scores:</p>
-			<p id="best-1"></p>
-			<p id="best-2"></p>
-			<p id="best-3"></p>
-			<p id="best-4"></p>
-			<p id="best-5"></p>
-		</div>
+		<div class="game"></div>
 	</div>
+
+	<footer>
+		<p> vnby, iztuyul </p>
+	</footer>
 </body>
 </html>
