@@ -7,93 +7,108 @@ body {
 	background-image: url("../images/bg-1.jpg");
 }
 
-.tableContainer1 {
+h1 {
+	font-family: 'Arvo', Georgia, Times, serif;
+	font-size: 70px;
+}
+
+p,
+a {
+	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-size: 40px;
+}
+
+input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: 0;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 250px;
+  border-radius: 3px;
+  padding: 10px 15px;
+  margin: 0 auto 10px auto;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+  font-weight: 300;
+}
+input:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+input:focus {
+  background-color: white;
+  width: 300px;
+  color: #53e3a6;
+}
+button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: 0;
+  background-color: white;
+  border: 0;
+  padding: 10px 15px;
+  color: #53e3a6;
+  border-radius: 3px;
+  width: 250px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+}
+button:hover {
+  background-color: #f5f7f9;
+}
+
+.wrapper {
+  background: #50a3a2;
+  background: -webkit-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
+  background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin-left: -8px;
+  display: table;
+}
+.wrapper.form-success .container h1 {
+  -webkit-transform: translateY(85px);
+          transform: translateY(85px);
+}
+.container {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
+.container h1 {
+  font-size: 40px;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-timing-function: ease-in-put;
+          transition-timing-function: ease-in-put;
+  font-weight: 200;
+}
+
+.login-greet {
 	height: 100%;
-	width: 100%;
-	display: table;
-}
-
-.tableContainer2 {
-	vertical-align: middle;
-	display: table-cell;
-	height: 100%;
-}
-
-#loginTable {
-	margin: 0 auto;
-	padding: 10px;
-	background-color: cyan;
-}
-
-#gameTable {
-	margin: 0 auto;
-	padding: 10px;
-	border-collapse: collapse;
-	border-spacing: 0 1em;
-	border: 2px;
 	text-align: center;
 }
-
-#gameTable tr {
-	height: 40px;
-}
-
-#gameTable td {
-	width: 40px;
-}
-
-#login-form {
-	text-align: right;
-}
-
-#button-form {
-	color: blue;
-}
-
-#login-button {
-	background-color: red;
-}
-
-.game-Button {
-	background-color: #4CAF50; /* Green */
-    border: 1px solid black;
+.button {
+    background-color: #4CAF50;
+    border-radius: 10px;
     color: white;
-    padding: 16px;
+    padding: 15px 30px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 20px;
-}
-
-.game-Button:hover {
-	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-
-#wrapper {
-	width: 100%;
-	overflow: auto;
-}
-
-#game {
-	float: left;
-	width: 60%;
-}
-
-#highscore {
-	float: right;
-	width: 35%;
-}
-
-#status {
-	width: 100%;
-}
-
-#usertime {
-	float: left;
-	width: 60%;
-}
-
-#startbutton {
-	float: right;
-	width: 40%;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 50px;
 }
