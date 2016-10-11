@@ -11,11 +11,25 @@
 	<div class="wrap">
 		<div class="info">
 			<button type="submit" class="button" id="startgame">Start Game</button>
-			<h2 id="uname">
-				<!-- will be filled by javascript-->
-			</h2>
-			<h3><time>00:00:00</time></h3>
-			<div class="statistic" id="stats"></div>
+			<table>
+				<tr>
+					<td>
+						<h4>Username:</h4>
+					</td>
+					<td>
+						<h2 id="uname">
+							<!-- will be filled by javascript-->
+						</h2>
+					</td>
+				</tr>
+				<tr>
+					<td><h4>Time: </h4></td>
+					<td><h3><time>00:00:00</time></h3></td>
+				</tr>
+			</table>			
+			<div class="statistic" id="stats">
+				<p>High Score: </p>
+			</div>
 		</div>
 		<div class="game"></div>
 	</div>

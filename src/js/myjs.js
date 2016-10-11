@@ -1,5 +1,8 @@
 function init() {
-document.getElementById("uname").innerHTML = "Username: " + sessionStorage.username;
+if(sessionStorage.username)
+document.getElementById("uname").innerHTML = sessionStorage.username;
+else
+document.getElementById("uname").innerHTML = "-";
 }
 
 $(document).ready(function(){
