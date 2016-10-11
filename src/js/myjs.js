@@ -1,14 +1,14 @@
 function init() {
-	document.getElementById("uname").innerHTML = "Username: " + sessionStorage.username;
+document.getElementById("uname").innerHTML = "Username: " + sessionStorage.username;
 }
 
 $(document).ready(function(){
-	var h3 = document.getElementsByTagName('h3')[0],
-	start = document.getElementById('startid'),
-	stop = document.getElementById('stop'),
-	clear = document.getElementById('clear'),
-	milliseconds = 0, minutes = 0, hours = 0,
-	t;
+var h3 = document.getElementsByTagName("h3")[0],
+start = document.getElementById("startid"),
+stop = document.getElementById("stop"),
+clear = document.getElementById("clear"),
+milliseconds = 0, minutes = 0, hours = 0, runtime = false,
+t;
 
 	$("#startgame").click(function(){
 		(function(){
@@ -45,7 +45,10 @@ $(document).ready(function(){
 				init: function(cards){
 					this.$game = $(".game");
 					this.cardsArray = $.merge(cards, cards);
-					this.shuffleCards(this.cardsArray);
+					if(runtime == false) {
+						this.shuffleCards(this.cardsArray);
+						runtime = true;
+					}
 					this.setup();
 				},
 
@@ -65,7 +68,7 @@ $(document).ready(function(){
 				binding: function(){
 					this.$memoryCards.on("click", this.cardClicked);
 				},
-		// kinda messy but hey
+
 		cardClicked: function(){
 			var _ = Memory;
 			var $card = $(this);
@@ -92,12 +95,10 @@ $(document).ready(function(){
 
 		win: function(){
 			this.paused = true;
-			setTimeout(function(){
-				Memory.showModal();
-				Memory.$game.fadeOut();
-			}, 1000);
+			//reset timer
 			clearTimeout(t);
 			milliseconds = 0; minutes = 0; hours = 0;
+			runtime = false;
 		},
 
 		// Fisher--Yates Algorithm -- http://bost.ocks.org/mike/shuffle/
@@ -124,7 +125,7 @@ $(document).ready(function(){
     		<div class="front"><img src="'+ v.img +'"\
     		alt="'+ v.name +'" /></div>\
     		<div class="back"><img src="src/images/guess.png"\
-    		alt="Codepen" /></div></div>\
+    		alt="CGuess" /></div></div>\
     		</div>';
     	});
     	return frag;
@@ -193,14 +194,3 @@ function updateStats(){
 })();
 });
 });
-
-/*
-stop.onclick = function() {
-	clearTimeout(t);
-}
-
-
-clear.onclick = function() {
-	h3.textContent = "00:00:00";
-	milliseconds = 0; minutes = 0; hours = 0;
-}*/
