@@ -4,7 +4,7 @@ html {
 
 body {
 	height: 100%;
-	background-image: url("../images/bg-1.jpg");
+	background-color: #C8F56D;
 }
 
 h1 {
@@ -43,7 +43,7 @@ input:hover {
 input:focus {
   background-color: white;
   width: 300px;
-  color: #53e3a6;
+  color: #36837B;
 }
 button {
   -webkit-appearance: none;
@@ -53,7 +53,7 @@ button {
   background-color: white;
   border: 0;
   padding: 10px 15px;
-  color: #53e3a6;
+  color: #36837B;
   border-radius: 3px;
   width: 250px;
   cursor: pointer;
@@ -66,9 +66,9 @@ button:hover {
 }
 
 .wrapper {
-  background: #50a3a2;
-  background: -webkit-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
-  background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
+  background: #3D9468;
+  background: -webkit-linear-gradient(top left, #3D9468 0%, #36837B 100%);
+  background: linear-gradient(to bottom right, #3D9468 0%, #36837B 100%);
   position: absolute;
   width: 100%;
   height: 100%;
@@ -101,7 +101,7 @@ button:hover {
 	text-align: center;
 }
 .button {
-    background-color: #4CAF50;
+    background-color: #6CA200;
     border-radius: 10px;
     color: white;
     padding: 15px 30px;
