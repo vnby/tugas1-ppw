@@ -27,6 +27,7 @@ h6,
 p,
 td,
 tr {
+  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
   color: white;
 }
 
@@ -51,10 +52,14 @@ tr {
   margin: 0, 10px;
   vertical-align: middle;
   text-align: center;
+  padding: 20px 0px 20px 0px;
+}
+
+.statistic h3,p {
+  font-size: 25px;
 }
 
 .button {
-    background-color: #4CAF50;
     margin: 0 auto;
     border-radius: 10px;
     color: white;
@@ -65,7 +70,18 @@ tr {
     font-size: 16px;
     margin: 0 10px;
     cursor: pointer;
-    border: none;
+    -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+    outline: 0;
+    background-color: white;
+    border: 0;
+    color: #36837B;
+    border-radius: 3px;
+    width: 250px;
+    font-size: 18px;
+   -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
 }
 
 .wrap {
