@@ -6,10 +6,13 @@ function init() {
 }
  
  /* inspired by :
- 	https://codepen.io/natewiley/pen/HBrbL
-	http://jsfiddle.net/pertrai1/r3su6b6n/
+ 	memory game: https://codepen.io/natewiley/pen/HBrbL
+	stopwatch: http://jsfiddle.net/pertrai1/r3su6b6n/
+	makara ui: google
  */
 $(document).ready(function(){
+
+	//start memory game
 	var h3 = document.getElementsByTagName("h3")[0],
 	start = document.getElementById("startid"),
 	stop = document.getElementById("stop"),
@@ -64,6 +67,7 @@ generateBoard();
 			if(milliseconds == 0)
 				timer();
 
+			//start stopwatch
 			function add() {
 				milliseconds++;
 				if (milliseconds >= 100) {
@@ -80,9 +84,11 @@ generateBoard();
 				timer();
 			}
 
+
 			function timer() {
 				t = setTimeout(add, 10);
 			}
+			//end stopwatch
 
 			function set(key, value) { localStorage.setItem(key, value); }
 			function get(key)        { return localStorage.getItem(key); }
@@ -181,8 +187,8 @@ generateBoard();
     		frag += '<div class="card" data-id="'+ v.id +'"><div class="inside">\
     		<div class="front"><img src="'+ v.img +'"\
     		alt="'+ v.name +'" /></div>\
-    		<div class="back"><img src="src/images/guess.png"\
-    		alt="CGuess" /></div></div>\
+    		<div class="back">\
+    		</div></div>\
     		</div>';
     	});
     	return frag;
@@ -233,6 +239,7 @@ var cards = [
 ];
 
 Memory.init(cards);
+//end memory game
 
 })();
 });
