@@ -13,18 +13,18 @@
 		<div class="info">
 			<div class="welcome"><h2>welcome,&nbsp;</h2> <h2 id="uname"></h2></div>			
 			<div class="forbutton">
-				<button type="submit" class="button" id="startgame">Start Game</button>
+				<a href="#play" type="submit" class="button" id="startgame">Start Game</a>
 			</div>
 		</div>
-		<div class="game"></div>
+		<div class="game" id="play"></div>
 		<div class="statistic" id="stats">
 			<p>Time: &nbsp;</p><h3><time>00:00:00</time></h3>
 			<p>High Score: </p>
 			<table>
 				<tr>
-					<th>Peringkat</th>
-					<th>Nama</th>
-					<th>Waktu</th>
+					<th id="trank">Rank</th>
+					<th id="tname">Name</th>
+					<th id="ttime">Time</th>
 				</tr>
 				<tr>
 					<td>1</td>
@@ -47,7 +47,7 @@
 					<td id="waktu3"></td>
 				</tr>
 				<tr>
-					<td>5</td>
+					<td id="t5">5</td>
 					<td id="uname4"></td>
 					<td id="waktu4"></td>
 				</tr>

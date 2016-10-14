@@ -13,7 +13,7 @@ html, body {
 }
 
 body {
-  background: black;
+  background: #8A8B8A;
   min-height: 100%;
   font-family: "Arial", sans-serif;
 }
@@ -24,9 +24,7 @@ h3,
 h4,
 h5,
 h6,
-p,
-td,
-tr {
+p {
   font-family: 'PT Sans', Helvetica, Arial, sans-serif;
   color: white;
 }
@@ -49,7 +47,7 @@ tr {
 
 .forbutton {
   width: 100%;
-  margin: 0, 10px;
+  margin: 0 auto;
   vertical-align: middle;
   text-align: center;
   padding: 20px 0px 20px 0px;
@@ -62,7 +60,6 @@ tr {
 .button {
     margin: 0 auto;
     border-radius: 10px;
-    color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -71,8 +68,7 @@ tr {
     margin: 0 10px;
     cursor: pointer;
     -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+    -moz-appearance: none;
     outline: 0;
     background-color: white;
     border: 0;
@@ -81,7 +77,12 @@ tr {
     width: 250px;
     font-size: 18px;
    -webkit-transition-duration: 0.25s;
+   -moz-transition-duration: 0.25s;
           transition-duration: 0.25s;
+}
+
+.button:hover {
+  background-color: #DFDFDF;
 }
 
 .wrap {
@@ -93,8 +94,10 @@ tr {
 
 .game {
   -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
           transform-style: preserve-3d;
   -webkit-perspective: 500px;
+  -moz-perspective: 500px;
           perspective: 500px;
   min-height: 100%;
   height: 100%;
@@ -103,7 +106,7 @@ tr {
   display: inline;
 }
 
-@-webkit-keyframes matchAnim {
+/*@-webkit-keyframes matchAnim {
   0% {
     background: #bcffcc;
   }
@@ -111,6 +114,15 @@ tr {
     background: white;
   }
 }
+
+@-moz-keyframes matchAnim {
+  0% {
+    background: #bcffcc;
+  }
+  100% {
+    background: white;
+  }
+}*/
 
 @keyframes matchAnim {
   0% {
@@ -128,11 +140,13 @@ tr {
   text-align: center;
   display: block;
   -webkit-perspective: 500px;
+  -moz-perspective: 500px;
           perspective: 500px;
   position: relative;
   cursor: pointer;
   z-index: 50;
   -webkit-tap-highlight-color: transparent;
+  -moz-tap-highlight-color: transparent;
 }
 @media (max-width: 800px) {
   .card {
@@ -145,25 +159,30 @@ tr {
   height: 100%;
   display: block;
   -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
           transform-style: preserve-3d;
   -webkit-transition: .4s ease-in-out;
+  -moz-transition: .4s ease-in-out;
   transition: .4s ease-in-out;
   background: white;
 }
 .card .inside.picked, .card .inside.matched {
   -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
 .card .inside.matched {
   -webkit-animation: 1s matchAnim ease-in-out;
+  -moz-animation: 1s matchAnim ease-in-out;
           animation: 1s matchAnim ease-in-out;
   -webkit-animation-delay: .4s;
+  -moz-animation-delay: .4s;
           animation-delay: .4s;
 }
 .card .front, .card .back {
-  border: 1px solid black;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+          /*backface-visibility: hidden;*/
   position: absolute;
   top: 0;
   left: 0;
@@ -171,6 +190,7 @@ tr {
   height: 100%;
   padding: 20px;
 }
+
 .card .front img, .card .back img {
   max-width: 100%;
   display: block;
@@ -179,6 +199,7 @@ tr {
 }
 .card .front {
   -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
           transform: rotateY(-180deg);
 }
 @media (max-width: 800px) {
@@ -199,3 +220,36 @@ footer {
   width: 100%;
   z-index: 0;
 }
+
+table {
+  color:  #36837B;
+  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+  padding: 15px;
+}
+
+td {
+  background-color: #EFEFEF;
+  padding: 15px;
+}
+
+#trank {
+  border-top-left-radius: 5%;
+}
+
+#ttime {
+  border-top-right-radius: 5%;
+}
+
+#t5 {
+  border-bottom-left-radius: 5%;
+}
+
+#waktu4 {
+  border-bottom-right-radius: 5%;
+}
+

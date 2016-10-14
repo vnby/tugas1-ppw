@@ -4,7 +4,11 @@ function init() {
 	else
 		document.getElementById("uname").innerHTML = "unknown";
 }
-
+ 
+ /* inspired by :
+ 	https://codepen.io/natewiley/pen/HBrbL
+	http://jsfiddle.net/pertrai1/r3su6b6n/
+ */
 $(document).ready(function(){
 	var h3 = document.getElementsByTagName("h3")[0],
 	start = document.getElementById("startid"),
